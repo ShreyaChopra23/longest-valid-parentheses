@@ -1,6 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-
 import java.util.*;
 
 public class Main {
@@ -14,11 +11,13 @@ public class Main {
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 stack.push(i);
-            } else {
+            }
+            else {
                 stack.pop();
                 if (stack.isEmpty()) {
                     stack.push(i);
-                } else {
+                }
+                else {
                     maxLength = Math.max(maxLength, i - stack.peek());
                 }
             }
